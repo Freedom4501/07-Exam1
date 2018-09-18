@@ -106,7 +106,14 @@ def problem3(point, length, delta, window):
     line = rg.Line(point,point2)
     line.attach_to(window)
     window.render()
-
+    for k in range(delta):
+        linex = point.x
+        liney = point.y + length * k
+        start = rg.Point(linex,liney)
+        end = rg.Point(linex + k*length, liney)
+        lines = rg.Line(start,end)
+        lines.attach_to(window)
+    window.render()
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
