@@ -68,19 +68,19 @@ def sum_of_digits_of_sum_of_factors(n):
        *** ASK FOR AN EXPLANATION IF YOU DO NOT UNDERSTAND THE ABOVE. ***
     """
     ############################################################################
-    #  TODO (continued):  This function is PURPOSELY ** not implemented. **
-    #  TODO (continued):  DO NOT IMPLEMENT  sum_of_digits_of_sum_of_factors.
+    #  Done (continued):  This function is PURPOSELY ** not implemented. **
+    #  Done (continued):  DO NOT IMPLEMENT  sum_of_digits_of_sum_of_factors.
     #                     Just leave it as it is (with no code).
     ############################################################################
 
 
 ################################################################################
-# TODO: 3.  READ the green doc-string for the   number_of_factors   function
+# Done: 3.  READ the green doc-string for the   number_of_factors   function
 #    defined below.  You do NOT need to understand its implementation,
 #    just its specification (per the doc-string).
 #    You should  ** CALL **  that function as needed in implementing
 #    the other functions.
-# TODO (continued):  After you have READ this _TODO_, change its _TODO_ to DONE.
+# Done (continued):  After you have READ this _TODO_, change its _TODO_ to DONE.
 ################################################################################
 
 def number_of_factors(n):
@@ -107,8 +107,8 @@ def number_of_factors(n):
 
     return count
     ############################################################################
-    #  TODO (continued):  Students: Do NOT touch the above   number_of_factors
-    #  TODO (continued)   function; CALL it as appropriate in problem(s) below.
+    #  Done (continued):  Students: Do NOT touch the above   number_of_factors
+    #  Done (continued)   function; CALL it as appropriate in problem(s) below.
     ############################################################################
 
 
@@ -323,11 +323,14 @@ def problem2b(a, b, x):
     # TODO (continued):       (i.e., call) the   number_of_factors   function
     #                         that is DEFINED ABOVE.
     ############################################################################
-    x = number_of_factors(b)
+
     sum = 0
+    fac = number_of_factors(b)
     for k in range(b-a+1):
-        if x >= 5:
-            sum = sum + k *(b-a+1)
+        if fac >= x:
+            sum = sum + k* number_of_factors(b)
+        else:
+            sum = sum+0
     return sum
 
 
